@@ -1,0 +1,62 @@
+
+<%- include("partials/userHeader"); -%>
+
+
+<section>
+  <div class="row productDetailsRow">
+    <div class="imgDiv col-lg-6 col-md-6 col-sm-6">
+      <div class="">
+        <img class="prodImg" src="<%= product.imgSrc %>" alt="item image">
+      </div>
+    </div>
+
+    <div class="nameDiv col-lg-6 col-md-6 col-sm-6">
+      <h2 style="margin-bottom: 20px; margin-top: 20px; color: #FF6347;"><%= product.productName %></h2>
+      <p>Price : &#8377 <%= product.price %></p>
+      <p>Rating : <%= avgRating %> &#9733</p>
+      <form style="margin:0; padding:0; display: inline-block;" class="" action="/buynow" method="POST">
+        <button name="prodID" value="<%= product._id %>" style="margin-top:5px;" class="btn btn-sm btn-outline-success">Buy Now</button>
+      </form>
+      <form style="margin:0; padding:0; display: inline-block;" class="" action="/userCart" method="POST">
+        <button name="prodID" value="<%= product._id %>" style="margin-top:5px;" type="submit" class="cartxxx btn btn-sm btn-outline-primary">Add to Cart</button>
+      </form>
+      <form style="margin:0; padding:0; display: inline-block;" class="" action="/wishList" method="POST">
+        <button name="prodID" value="<%= product._id %>" style="margin-top:5px;" type="submit" class="wishxxx btn btn-sm btn-outline-danger">Add to Wish list</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="productReview">
+    <h3 class="hide" style="display:none">No Reviews Yet</h3>
+    <% reviewList.forEach(function(id){ %>
+      <div class="productReview1">
+      <p><span style="color:#fffafa;"><%= id.customerName %></span></p>
+      <p>"<span style="color:#fffafa;"><%= id.title %>"</span></p>
+      <p><span style="color:#fffafa;"><%= id.rating %></span>/5</p>
+      <p><span style="color:#fffafa;"><%= id.summary %></span></p>
+      </div>
+    <% }) %>
+  </div>
+
+</section>
+
+
+<script type="text/javascript">
+  // $(document).ready(function () {
+
+  $(".wishxxx").click(function() {
+    alert("Item Added To Your Wish List !");
+  });
+
+  $(".cartxxx").click(function() {
+    alert("Item Added To Your Cart !");
+  });
+
+  if(<%=countItems%> == 0){
+    $(".hide").css("display", "inline-block");
+  }
+
+  // });
+</script>
+
+<%- include("partials/footer"); -%>

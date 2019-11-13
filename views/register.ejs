@@ -1,0 +1,68 @@
+
+<%- include("partials/loginHeader"); -%>
+
+
+<div class="container mt-5" style="padding-top: 20px;">
+  <h1 style="margin: 20px 0 20px 15px; ">Register Here !</h1>
+
+  <div class="row">
+    <div class="col-sm-8">
+      <div class="card">
+        <div class="card-body">
+
+          <!-- Makes POST request to /login route -->
+          <form action="/register" method="POST">
+
+            <div class="form-group">
+              <label>Name</label>
+              <input type="text" class="form-control" name="shubhNaam" placeholder="Enter Your Name">
+            </div>
+            <div class="form-group">
+              <label>Mobile Number</label>
+              <input type="text" class="form-control" name="MobNo" placeholder="Enter Your Mobile Number">
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" name="username" placeholder="Enter Your Email">
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" class="form-control" name="password" placeholder="Type in your Password">
+            </div>
+
+            <button type="submit" class="btn btn-dark">Register</button>
+            <span style="font-weight:500;">    Have Account?  </span><a href="/login" class="btn btn-dark">Login Here</a>
+
+          </form>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-6" style="margin-top: 20px; margin-bottom: 30px;">
+      <div class="card">
+        <div class="card-body">
+          <a class="btn btn-block btn-social btn-google" href="/auth/google" role="button">
+            <i class="fab fa-google icon"></i>
+            Sign up with Google
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-6" style="margin-top: 20px; margin-bottom: 30px;">
+      <div class="card">
+        <div class="card-body">
+          <a class="btn btn-block btn-social btn-facebook" href="/auth/facebook" role="button">
+            <i class="fab fa-facebook icon"></i>
+            Sign up with Facebook
+          </a>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</div>
+
+<%- include('partials/footer') %>

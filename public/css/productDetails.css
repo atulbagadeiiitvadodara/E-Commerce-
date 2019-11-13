@@ -1,0 +1,52 @@
+.productDetailsRow{
+    margin: 0;
+    padding: 0;
+    background-color: #292b2c;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.productReview{
+  background-color: #292b2c;
+  margin: 0;
+  padding: 20px;
+  border-style: groove;
+  border-color: grey;
+  border-radius: 8px;
+  font-family: 'Red Hat Text', sans-serif;
+  color: white;
+}
+
+.productReview1{
+  padding: 20px;
+}
+
+.imgDiv{
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.prodImg{
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    z-index: 3;
+}
+
+/* only for mobile screen */
+@media only screen and (max-width: 768px) {
+    .prodImg {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+.nameDiv{
+    font-family: 'Red Hat Text', sans-serif;
+    padding-top: 40px;
+    margin-bottom: 40px;
+    color: white;
+}

@@ -1,0 +1,58 @@
+
+<%# for Stylesheet, Refer userStyle.css %>
+
+
+<%- include("partials/userHeader"); -%>
+
+
+<section class="hotSection">
+  <div class="hotHeading">
+    <h3 class="isCartEmpty" style="text-align: left; margin-left:20px;">Your Cart is Empty</h3>
+  </div>
+  <div class="row userCartRow">
+    <% list.forEach(function(id){ %>
+    <div class="col-lg-3 col-md-4 col-sm-6 colBox">
+      <div style="width:100%; display: inline-block;">
+        <form class="" action="/removeProductFromCart" method="POST">
+          <button name="prodID" value="<%= id.productID %>" style="margin:5px; float:right;" type="submit" class="btn btn-sm btn-outline-danger"><i style="padding: 5px 0 5px 0;" class="fas fa-trash-alt fa-lg"></i></button>
+        </form>
+      </div>
+      <div>
+        <img class="hotImg" src="<%= id.imgSrc %>" alt="image 1">
+      </div>
+      <div class="hotText">
+        <h5 style="margin-top: 10px; margin-bottom: 10px;"><%= id.productName %></h5>
+        <p style="margin-top:5px; text-align: center; color:grey;">&#8377 <%= id.price %></p>
+      </div>
+    </div>
+    <% }) %>
+  </div>
+</section>
+
+<section class="cartSection1">
+  <div class="cartCalculation">
+
+    <div class="hotHeading" style="border-style: none;">
+      <h3 style="text-align: left; margin-left:10px;">Summary</h3>
+    </div>
+    <h4>Total Items in Cart : <%= list.length %></h4>
+    <h4>Amount To Pay : &#8377 <%= sum %> </h4>
+
+    <a href="/placeOrder" class="proceed btn btn-outline-success btn-lg" style="margin-top: 20px; margin-left: 2%; display: none;">Place Order</a>
+
+  </div>
+</section>
+
+<script type="text/javascript">
+  $(document).ready(function () {
+
+    if(<%=sum%>>0){
+      $(".proceed").css("display","inline-block");
+      $(".isCartEmpty").text("Your Cart (<%= list.length %>)");
+    }
+
+  });
+</script>
+
+
+<%- include("partials/footer"); -%>

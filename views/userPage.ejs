@@ -1,0 +1,81 @@
+<%- include("partials/userHeader"); -%>
+
+
+<section class="yourSection">
+  <div class="yourDiv">
+    <div class="accountDiv">
+      <h2>My Account</h2>
+    </div>
+    <div class="yourDiv0">
+
+      <div class="yourDiv1">
+        <h5>Your Orders<a class=btn my-2 my-sm-0 btn-sm" href="/myOrders" role="button"><i class="yourbtn fas fa-arrow-circle-right fa-lg"></i></a></h5>
+      </div>
+      <div class="yourDiv1">
+        <h5>Your Wish List<a class=btn my-2 my-sm-0 btn-sm" href="/wishList" role="button"> <i class="yourbtn fas fa-arrow-circle-right fa-lg"></i></a></h5>
+      </div>
+      <div class="yourDiv1">
+        <h5>Your Addresses<a class=btn my-2 my-sm-0 btn-sm" href="/address" role="button"> <i class="yourbtn fas fa-arrow-circle-right fa-lg"></i></a></h5>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="hotSection">
+
+  <div class="hotHeading">
+    <h3><i class="fab fa-gripfire"></i> Hot Deals for <%=person%></h3>
+  </div>
+
+  <div class="row">
+
+    <%# recommend new items %>
+    <% var i=0; %>
+    <% for(i=0; i<4; i++){ %>
+    <div class="col-lg-3 col-md-4 col-sm-6 colBox">
+      <div style="width:100%; display: inline-block;">
+        <form class="" action="/wishList" method="POST">
+          <button name="prodID" value="<%= items[i]._id %>" style="margin:5px; float:right;" type="submit" class="wishxxx btn btn-sm btn-outline-danger"><i class="fab fa-gratipay fa-lg"></i></button>
+        </form>
+      </div>
+      <div>
+        <img class="hotImg" src="<%= items[i].imgSrc %>" alt="image 1">
+      </div>
+      <div class="hotText">
+        <h5 style="margin-top: 10px; margin-bottom: 10px;"><%= items[i].productName %></h5>
+        <form style="margin:0; padding:0; display: inline-block;" class="" action="/productDetails" method="POST">
+          <button name="prodID" value="<%= items[i]._id %>" style="margin-top: 10px; margin-bottom: 10px;" type="submit" class="btn btn-sm btn-outline-secondary">View Product</button>
+        </form><br>
+        <form style="margin:0; padding:0; display: inline-block;" class="" action="/buyNow" method="POST">
+          <button name="prodID" value="<%= items[i]._id %>" style="margin-top:5px;" type="submit" class="btn btn-sm btn-outline-success">Buy Now</button>
+        </form>
+        <form style="margin:0; padding:0; display: inline-block;" class="" action="/userCart" method="POST">
+          <button name="prodID" value="<%= items[i]._id %>" style="margin-top:5px;" type="submit" class="cartxxx btn btn-sm btn-outline-primary">Add to Cart</button>
+        </form>
+      </div>
+    </div>
+
+    <% }%>
+
+
+  </div>
+</section>
+
+<script type="text/javascript">
+  // $(document).ready(function () {
+
+  $(".wishxxx").click(function() {
+    alert("Item Added To Your Wish List !");
+  });
+
+  $(".cartxxx").click(function() {
+    alert("Item Added To Your Cart !");
+  });
+
+
+  // });
+</script>
+
+
+<%- include("partials/footer"); -%>

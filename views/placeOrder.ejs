@@ -1,0 +1,37 @@
+
+<%# for Stylesheet, Refer userStyle.css %>
+
+
+<%- include("partials/userHeader"); -%>
+
+<section>
+    <div class="row">
+        <div class="buyNowDiv1 col-lg-6 col-md-6 col-sm-12">
+            
+                <h4 style="color: rgb(223, 111, 91); margin-top: 40px; margin-bottom: 20px;">Billing & Delivery Address</h4>
+                <p class="buyNowPara">Name : <span style="color: grey;"><%= foundUser.Name %></span></p>
+                <p class="buyNowPara">Mobile No. : <span style="color: grey;"><%= foundUser.Mobile_No %></span></p>
+                <p class="buyNowPara">Country : <span style="color: grey;"><%= foundUser.country %></span></p>
+                <p class="buyNowPara">City : <span style="color: grey;"><%= foundUser.city %></span></p>
+                <p class="buyNowPara">Pin Code : <span style="color: grey;"><%= foundUser.pinCode %></span></p>
+                <p class="buyNowPara">House No. : <span style="color: grey;"><%= foundUser.houseNo %></span></p>
+                <p class="buyNowPara">Landmark : <span style="color: grey;"><%= foundUser.landmark %></span></p>
+                <div class="buyNowAddress">
+                    <a class="btn btn-sm btn-outline-danger" href="/address" >Update Your Address Here</a>
+                </div>                
+            
+        </div>
+
+        <div class="buyNowDiv1 col-lg-6 col-md-6 col-sm-12">
+
+            <h4 class="mobileViewPlaceOrder">Amount To Pay - &#8377 <%= sum %></h4>
+            <!-- <button style="margin-bottom: 20px;" class="btn btn-lg btn-outline-success">Continue To Payment</button> -->
+            <form action="/orderPaymentFromCart" method="POST">
+                <button name="" value="" type="submit" class="btn btn-lg btn-outline-success">Continue To Payment</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+
+<%- include("partials/footer"); -%>

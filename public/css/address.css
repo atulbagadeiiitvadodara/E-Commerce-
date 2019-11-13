@@ -1,0 +1,46 @@
+
+.prevAddSection{
+  margin: 0;
+  border-style: dotted;
+  border-radius: 0 0 8px 8px;
+}
+
+.prevAddHead{
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 15px;
+  padding-left: 20px;
+  font-family: 'Red Hat Text', sans-serif;
+}
+
+.prevAddress{
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 20px;
+  font-family: 'Red Hat Text', sans-serif;
+}
+
+
+.newAddSection{
+  margin: 0;
+  border-left-style: dotted;
+  border-right-style: dotted;
+  border-bottom-style: dotted;
+  border-radius: 8px;
+}
+
+.newAddHead{
+  width: 100%;
+  padding-top: 25px;
+  padding-bottom: 15px;
+  padding-left: 20px;
+  font-family: 'Red Hat Text', sans-serif;
+}
+
+.newAddress{
+  width: 60%;
+  padding-top: 15px;
+  padding-bottom: 25px;
+  padding-left: 20px;
+  font-family: 'Red Hat Text', sans-serif;
+}

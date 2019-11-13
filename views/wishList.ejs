@@ -1,0 +1,56 @@
+<%- include("partials/userHeader"); -%>
+
+<!-- <section>
+    <div class="">
+      <% list.forEach(function(id){ %>
+          <h1><%= id.productName %></h1>
+          <p><%= id.rating %></p>
+          <p><%= id.review %></p>
+          <p><%= id.price %></p>
+          <img src="<%= id.imgSrc %>" alt="">
+      <% }) %>
+    </div>
+  </section> -->
+
+<section class="hotSection">
+  <div class="hotHeading">
+    <h3 class="isWishListEmpty"><i class="far fa-grin-hearts"></i> <%=person%>'s Wish List is Empty</h3>
+  </div>
+  <div class="row">
+    <% list.forEach(function(id){ %>
+    <div class="col-lg-3 col-md-4 col-sm-6 colBox">
+      <div style="width:100%; display: inline-block;">
+        <form class="" action="/removeProductFromList" method="POST">
+          <button name="prodID" value="<%= id.productID %>" style="margin:5px; float:right;" type="submit" class="btn btn-sm btn-outline-danger"><i style="padding: 5px 0 5px 0;" class="fas fa-trash-alt fa-lg"></i></button>
+        </form>
+      </div>
+      <div>
+        <img class="hotImg" src="<%= id.imgSrc %>" alt="image 1">
+      </div>
+      <div class="hotText">
+        <h5 style="margin-top: 10px; margin-bottom: 10px;"><%= id.productName %></h5>
+        <form style="margin:0; padding:0; display: inline-block;" class="" action="/buyNow" method="POST">
+          <button name="prodID" value="<%= id.productID %>" style="margin-top:5px;" class="btn btn-sm btn-outline-success">Buy Now</button>
+        </form>
+        <form style="margin:0; padding:0; display: inline-block;" class="" action="/userCart" method="POST">
+          <button name="prodID" value="<%= id.productID %>" style="margin-top:5px;" type="submit" class="cartxxx btn btn-sm btn-outline-primary">Add to Cart</button>
+        </form>
+      </div>
+    </div>
+    <% }) %>
+  </div>
+</section>
+
+
+<script type="text/javascript">
+  $(document).ready(function() {
+
+    if ( <%= count %> > 0) {
+      $(".isWishListEmpty").text("Your Wish List");
+    }
+
+  });
+</script>
+
+
+<%- include("partials/footer"); -%>

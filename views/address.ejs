@@ -1,0 +1,141 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>OnePlace</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Red+Hat+Text:500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/userStyle.css">
+  <link rel="stylesheet" href="/css/address.css">
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/0c06c3f7bb.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+
+  <!-- User Specific Navbar Section -->
+
+  <section>
+
+    <!-- Nav Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" id="color" href="/">OnePlace</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item dropdown">
+            <a id="colors" class="nav-link dropdown-toggle userName" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Welcome <%=person.Name%> !
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="/userPage">My Account</a>
+              <a class="dropdown-item" href="/wishList">My Wish List</a>
+              <a class="dropdown-item" href="/myOrders">My Orders</a>
+            </div>
+          </li>
+
+          <!-- <li class="nav-item">
+            <a id="colors" class="nav-link" href="#"><i class="fab fa-angellist"></i> Today's offers</a>
+          </li> -->
+
+          <li class="nav-item dropdown">
+            <a id="colors" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              More
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="/workInProgress">About us</a>
+              <a class="dropdown-item" href="/workInProgress">Contact us</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="/workInProgress">FAQ</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a id="colors" class="nav-link" href="/userCart"><i class="fas fa-shopping-cart"></i> Cart</a>
+          </li>
+          <li class="nav-item">
+            <a id="colors" class="nav-link" href="/logout" role="button">Sign Out</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+  </section>
+
+
+  <section class="prevAddSection">
+    <div class="prevAddHead">
+      <h3>Your default Address</h3>
+    </div>
+    <div class="prevAddress">
+      <p><b>Country :</b> <%=person.country%></p>
+      <p><b>Name :</b> <%=person.Name%></p>
+      <p><b>Mobile Number :</b> <%=person.Mobile_No%></p>
+      <p><b>Pin Code :</b> <%=person.pinCode%></p>
+      <p><b>City :</b> <%=person.city%></p>
+      <p><b>House Number :</b> <%=person.houseNo%></p>
+      <p><b>Landmark :</b> <%=person.landmark%></p>
+    </div>
+  </section>
+
+  <section class="newAddSection">
+    <div class="newAddHead">
+      <h3>Update Your Address Here :</h3>
+      <p style="opacity: 0.7;">* All fields are mandatory</p>
+    </div>
+    <div class="newAddress">
+      <form class="" action="/address" method="POST">
+        <div class="form-group">
+
+          <input class="form-control form-control-sm" type="text" placeholder="Enter your Country" name="country" required>
+        </div>
+        <div class="form-group">
+
+          <input class="form-control form-control-sm" type="text" placeholder="Enter your Name" name="personName" required>
+        </div>
+        <div class="form-group">
+
+          <input class="form-control form-control-sm" type="text" placeholder="Enter your Mobile Number" name="personMobNo" required>
+        </div>
+        <div class="form-group">
+
+          <input class="form-control form-control-sm" type="text" placeholder="Enter City Name" name="city" required>
+        </div>
+        <div class="form-group">
+
+          <input class="form-control form-control-sm" type="text" placeholder="Enter Pin Code" name="pincode" required>
+        </div>
+        <div class="form-group">
+
+          <input class="form-control form-control-sm" type="text" placeholder="Enter House Number" name="houseNo" required>
+        </div>
+        <div class="form-group">
+
+          <input class="form-control form-control-sm" type="text" placeholder="Enter Landmark e.g. Near R-Cinema Complex" name="landmark" required>
+        </div>
+
+        <button type="submit" class="btn btn-outline-dark btn-md">Update</button>
+
+      </form>
+
+    </div>
+
+  </section>
+
+
+  <%- include("partials/footer"); -%>

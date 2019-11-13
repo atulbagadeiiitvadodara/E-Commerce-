@@ -1,0 +1,70 @@
+<%- include("partials/userHeader"); -%>
+
+<section>
+
+    <div class="myOrdersHead">
+        <h1>Order History</h1>
+    </div>
+    <div class="row">
+
+        <% list.forEach(function(id){ %>
+        <div class="myOrdersColumn1 col-lg-6 col-md-6 col-sm-6">
+
+            <div>
+                <img class="myOrdersImg" src="<%= id.imgSrc %>" alt="product_image">
+            </div>
+            <h4 style="margin-top: 10px; margin-bottom: 10px;"><%= id.productName %></h4>
+            <p style="margin-top:5px; text-align: center; color:grey;">Paid &#8377 <%= id.price %> Successfully</p>
+        </div>
+
+        <div class="myOrdersColumn2 col-lg-6 col-md-6 col-sm-6">
+
+            <h2 style="color: #5cb85c; text-align: center; margin-bottom: 20px;">Delivery Details</h2>
+
+            <p>Order At: <%= id.date %></p>
+            <p>Name: <%= id.customerName %></p>
+            <p>Mobile No: <%= id.customerMobileNo %></p>
+            <p>Country: <%= id.customerCountry %></p>
+            <p>Pin Code: <%= id.customerPinCode %></p>
+            <p>City: <%= id.customerCity %></p>
+            <p>House Number: <%= id.customerHouseNo %></p>
+            <p>Landmark: <%= id.customerLandmark %></p>
+
+        </div>
+
+        <div style="margin: 0; padding:20px;" class="reviewDiv1 col-md-12 col-lg-12 col-sm-12">
+
+          <form class="revBorder" action="/postReview" method="POST">
+            <div class="form-group reviewForm">
+              <label class="reviewLabel" for="exampleFormControlInput1">Title</label>
+              <input class="form-control form-control-sm" type="text" placeholder="Title" name="title" required>
+            </div>
+            <div class="form-group reviewForm">
+              <label class="reviewLabel" for="exampleFormControlInput1">Rate the product</label>
+              <input class="form-control form-control-sm" type="text" placeholder="Rate out of 5" name="rating" required>
+            </div>
+            <div class="form-group reviewForm">
+              <label class="reviewLabel" for="exampleFormControlInput1">Details</label>
+              <input class="form-control form-control-sm" type="text" placeholder="Brief summary" name="summary" required>
+            </div>
+
+            <button style="margin-left: 12%;" name="prodID" value="<%= id.productID %>" type="submit" class="btn btn-outline-primary btn-md">Submit Review</button>
+
+          </form>
+          <!-- <hr style="border-color:#F5B041;"> -->
+        </div>
+        <% }) %>
+
+    </div>
+
+</section>
+
+
+<script type="text/javascript">
+    // $(document).ready(function () {
+
+
+    // });
+  </script>
+
+<%- include("partials/footer"); -%>

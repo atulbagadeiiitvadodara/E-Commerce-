@@ -1,0 +1,162 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+
+.row{
+  margin: 0;
+  padding: 0;
+}
+
+#color{
+  color: orange;
+}
+
+#colors{
+  /* color: #FF6347; */
+}
+
+
+/* Seperate login page style */
+.card-outline-google:hover{
+  background-color: red;
+}
+
+.btn-google:hover{
+  color: white;
+}
+
+.card-outline-facebook:hover{
+  background-color: skyblue;
+}
+
+.navbar-brand{
+  font-size: 1.5em;
+  color: tomato;
+}
+
+.loginMenu{
+  text-align: center;
+  color: #F5B041;
+  font-family: 'Red Hat Text', sans-serif;
+  display: inline-block;
+}
+
+.xyz{
+  padding-top: 95px;
+  padding-bottom: 10px;
+  background-color: #292b2c;
+}
+
+.secondNav{
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.formLabel{
+  text-align: left;
+}
+
+.modalText{
+  color: black;
+  font-weight: 100;
+  font-size: 22px;
+}
+
+
+.dealsHeading{
+  background-color: #292b2c;
+  border-style: ridge;
+  border-color: grey;
+  border-radius: 0 0 8px 8px;
+  width: 100%;
+  padding-top: 30px;
+  text-align: center;
+  padding-bottom: 30px;
+  color: #F5B041;
+  font-family: 'Red Hat Text', sans-serif;
+}
+
+.productImg{
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.section1{
+  text-align: center;
+}
+
+.section0{
+  margin: 0;
+}
+
+.border{
+  /* background-color: darkgrey; */
+  padding: 3% 0 3% 0;
+  margin: 0;
+  background-color: #292b2c;
+  border-radius: 8px;
+  /* background-image: linear-gradient(315deg, #000000 0%, #414141 74%); */
+}
+
+.productName{
+  color: orange;
+  margin: 5% 0 5% 0;
+  font-weight: 500;
+  font-family: 'Red Hat Text', sans-serif;
+}
+
+.footer{
+  font-family: 'Red Hat Text', sans-serif;
+  border-style: groove;
+  background-color: #292b2c;
+  border-radius: 8px 8px 0 0;
+  text-align: center;
+}
+
+.footerHeading{
+  width: 100%;
+  padding-top: 40px;
+  font-size: 22px;
+  color: #F5B041;
+}
+
+.foo{
+  margin-bottom: 20px;
+}
+
+.footerContent:hover{
+  color: tomato;
+  text-decoration: none;
+}
+
+.footerContent{
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.icon{
+  margin-right: 10px;
+}
+
+.footerCopy{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding-top: 20px;
+  color: white;
+  width: 100%;
+  border-top-style: ridge;
+  border-color: grey;
+  text-align: center;
+}
+
+
+.terms{
+  background-color: #292b2c;
+}

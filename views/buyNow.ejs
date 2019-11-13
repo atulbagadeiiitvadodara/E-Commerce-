@@ -1,0 +1,124 @@
+
+<html>
+
+        <head>
+          <meta charset="utf-8">
+          <title>OnePlace</title>
+        
+          <!-- Google Fonts -->
+          <link href="https://fonts.googleapis.com/css?family=Red+Hat+Text:500&display=swap" rel="stylesheet">
+          <link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu&display=swap" rel="stylesheet">
+          <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+          <link rel="stylesheet" href="/css/style.css">
+          <link rel="stylesheet" href="/css/userStyle.css">
+          <link rel="stylesheet" href="/css/address.css">
+        
+          <!-- Font Awesome -->
+          <script src="https://kit.fontawesome.com/0c06c3f7bb.js"></script>
+        
+          <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+          <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        </head>
+        
+        <body>
+        
+        
+          <!-- User Specific Navbar Section -->
+        
+          <section>
+        
+            <!-- Nav Bar -->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+              <a class="navbar-brand" id="color" href="/">OnePlace</a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+        
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item dropdown">
+                    <a id="colors" class="nav-link dropdown-toggle userName" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Welcome <%=person.Name%> !
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/userPage">My Account</a>
+                      <a class="dropdown-item" href="/wishList">My Wish List</a>
+                      <a class="dropdown-item" href="/myOrders">My Orders</a>
+                    </div>
+                  </li>
+        
+                  <!-- <li class="nav-item">
+                    <a id="colors" class="nav-link" href="#"><i class="fab fa-angellist"></i> Today's offers</a>
+                  </li> -->
+        
+                  <li class="nav-item dropdown">
+                    <a id="colors" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      More
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="/workInProgress">About us</a>
+                      <a class="dropdown-item" href="/workInProgress">Contact us</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="/workInProgress">FAQ</a>
+                    </div>
+                  </li>
+                  <li class="nav-item">
+                    <a id="colors" class="nav-link" href="/userCart"><i class="fas fa-shopping-cart"></i> Cart</a>
+                  </li>
+                  <li class="nav-item">
+                    <a id="colors" class="nav-link" href="/logout" role="button">Sign Out</a>
+                  </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+              </div>
+            </nav>
+          </section>
+
+
+
+<section>
+    <div class="row">
+
+    
+        <div class="buyNowDiv1 col-lg-6 col-md-6 col-sm-6">
+            <div>
+                <img class="buyNowImg" src="<%= product.imgSrc %>" alt="">
+            </div>
+            <div class="buyNowProdName">
+                <h4><%= product.productName %></h4>
+                <h5 style="color: grey">&#8377 <%= product.price %></h5>
+            </div>  
+        </div>
+
+        <div class="buyNowDiv1 col-lg-6 col-md-6 col-sm-6">
+            <h4 style="color: rgb(223, 111, 91); margin-top: 40px; margin-bottom: 20px;">Billing & Delivery Address</h4>
+            <p class="buyNowPara">Name : <span style="color: grey;"><%= person.Name %></span></p>
+            <p class="buyNowPara">Mobile No. : <span style="color: grey;"><%= person.Mobile_No %></span></p>
+            <p class="buyNowPara">Country : <span style="color: grey;"><%= person.country %></span></p>
+            <p class="buyNowPara">City : <span style="color: grey;"><%= person.city %></span></p>
+            <p class="buyNowPara">Pin Code : <span style="color: grey;"><%= person.pinCode %></span></p>
+            <p class="buyNowPara">House No. : <span style="color: grey;"><%= person.houseNo %></span></p>
+            <p class="buyNowPara">Landmark : <span style="color: grey;"><%= person.landmark %></span></p>
+          <div class="buyNowAddress">
+                <a class="btn btn-sm btn-outline-danger" href="/address" >Update Your Address Here</a>
+          </div>
+        </div>
+
+    </div>
+
+    <div class="buyNowPaymentButton">
+        
+        <form action="/orderPayment" method="POST">
+          <button name="prodID" value="<%= product._id %>" type="submit" class="btn btn-lg btn-outline-success">Continue To Payment</button>
+        </form>
+    
+    </div>
+
+</section>
+
+
+<%- include("partials/footer"); -%>

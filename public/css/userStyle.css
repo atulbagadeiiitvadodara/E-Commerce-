@@ -1,0 +1,259 @@
+body{
+  background-color: #f7f7f7;
+}
+
+.yourSection{
+  width: 100%;
+  background-color: #292b2c;
+
+}
+
+.yourDiv0{
+  text-align: center;
+}
+
+.yourDiv{
+  padding-bottom:30px;
+  border-color: grey;
+}
+
+.yourbtn{
+  color: tomato;
+}
+
+.yourbtn:hover{
+  color: #5cb85c;
+}
+
+.accountDiv{
+  width: 100%;
+  height: 100px;
+  padding-top: 25px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+  color: #F5B041;
+  font-family: 'Red Hat Text', sans-serif;
+}
+
+.yourDiv1{
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+  border-style: dashed;
+  border-color: grey;
+  border-radius: 8px;
+  color: tomato;
+  font-family: 'Red Hat Text', sans-serif;
+  display: inline-block;
+}
+
+
+.userName{
+  font-weight: bold;
+  font-family: 'Red Hat Text', sans-serif;
+}
+
+.hotHeading{
+  background-color: #292b2c;
+  border-style: ridge;
+  border-color: grey;
+  border-radius: 0 0 8px 8px;
+  width: 100%;
+  padding-top: 30px;
+  text-align: center;
+  padding-bottom: 30px;
+  color: #F5B041;
+  font-family: 'Red Hat Text', sans-serif;
+}
+
+.row .hotSection{
+  margin: 0;
+  padding: 0;
+}
+
+.colBox{
+  background-color: #292b2c;
+  border-style: ridge;
+  border-color: grey;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-radius: 8px;
+}
+
+.hotImg{
+  width: 200px;
+  height: 200px;
+  border-radius: 15px;
+  display: inline-block;
+}
+
+.prodLink{
+  text-decoration: none;
+  color: #FF6347;
+}
+
+.prodLink:hover{
+  text-decoration: underline;
+  color: #F5B041;
+}
+
+.hotText{
+  color: #FF6347;
+}
+
+.cartCalculation{
+  background-color: #292b2c;
+  color: white;
+  padding: 20px;
+  border-style: groove;
+  border-color: grey;
+  border-radius: 8px;
+}
+
+.buyNowDiv1{
+  background-color: #292b2c;
+  text-align: center;
+  font-family: 'Red Hat Text', sans-serif;
+}
+
+
+.buyNowImg{
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
+  margin-top: 40px;
+}
+
+/* only for mobile screen */
+@media only screen and (max-width: 768px) {
+  .buyNowImg {
+      width: 200px;
+      height: 200px;
+  }
+}
+
+.buyNowProdName{
+  color: #FF6347;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.buyNowDiv2{
+  padding-top: 40px;
+  padding-bottom: 20px;
+  background-color: #292b2c;
+  font-family: 'Red Hat Text', sans-serif;
+}
+
+.buyNowPara{
+  color:white;
+  text-align: left;
+  margin-left: 2%;
+}
+
+.buyNowAddress{
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.buyNowPaymentButton{
+  background-color: #292b2c;
+  padding-bottom: 40px;
+  padding-top: 20px;
+  text-align: center;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+/* for placeOrder page only */
+
+.mobileViewPlaceOrder{
+  color: grey;
+  margin-top: 40%;
+  margin-bottom: 5%;
+}
+
+/* only for mobile screen */
+@media only screen and (max-width: 768px) {
+  .mobileViewPlaceOrder {
+      margin-top: 20px;
+  }
+}
+
+
+/* Order History Page */
+
+.myOrdersHead{
+  color: #F5B041;
+  font-family: 'Red Hat Text', sans-serif;
+  background-color: #292b2c;
+  text-align: center;
+  padding: 30px;
+  margin: 0;
+}
+
+.myOrdersColumn1{
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: #292b2c;
+  color: bisque;
+  text-align: center;
+}
+
+.myOrdersImg{
+  border-radius: 8px;
+  width: 300px;
+  height: 300px;
+}
+
+/* only for mobile screen */
+@media only screen and (max-width: 768px) {
+  .myOrdersImg {
+      width: 200px;
+      height: 200px;
+  }
+}
+
+.myOrdersColumn2{
+  padding-top: 10px;
+  padding-bottom: 30px;
+  background-color: #292b2c;
+  color: bisque;
+}
+
+
+.reviewDiv1{
+  background-color: #292b2c;
+  margin: 0;
+  width: 100%;
+}
+
+.reviewForm{
+  margin-left: 12%;
+  width: 50%;
+  font-family: 'Red Hat Text', sans-serif;
+  align-items: center;
+  justify-content: center;
+}
+
+.reviewLabel{
+  color: #F5B041;
+}
+
+.reviewDiv2{
+  text-align: center;
+  background-color: #292b2c;
+  margin: 0;
+  padding: 20px;
+  width: 100%;
+  color: bisque;
+}
+
+/* Thank you page */
+.thankYouDiv1{
+  padding: 100px;
+  text-align: center;
+  border-style: inset;
+  color: #FF6347;
+}
